@@ -1,0 +1,43 @@
+.warning-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, var(--accent-red-dark), var(--accent-red), var(--accent-red-dark));
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: bannerPulse 3s ease-in-out infinite;
+}
+
+.warning-icon {
+  animation: iconBlink 1.5s ease-in-out infinite;
+}
+
+.warning-text {
+  max-width: 600px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.warning-text.visible {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .warning-banner {
+    font-size: 0.65rem;
+    padding: 6px 12px;
+  }
+}

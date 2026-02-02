@@ -1,0 +1,45 @@
+.edu-popup {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  max-width: 400px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent-red);
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 1500;
+  transform: translateX(150%);
+  transition: transform var(--transition-medium);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.edu-popup.active {
+  transform: translateX(0);
+}
+
+.edu-popup-content {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.edu-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.edu-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .edu-popup {
+    left: 12px;
+    right: 12px;
+    max-width: none;
+    bottom: 12px;
+  }
+}

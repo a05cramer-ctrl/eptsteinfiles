@@ -9,7 +9,7 @@ const NAV_ITEMS = [
   { id: 'report', label: 'REPORT' },
 ];
 
-const CONTRACT_ADDRESS = '4emupjLQka3CQkacC8u2e4AuSApqBTGFm8zzzrC9pump';
+const CONTRACT_ADDRESS = 'BLxt8pwxiNtbuANTnP6BUv7BGLtB39ih8o7mX37Fpump';
 
 export function Navigation() {
   const [activeSection, setActiveSection] = useState('home');
